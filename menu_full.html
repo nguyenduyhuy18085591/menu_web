@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu đa cấp</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        body{
+            font-family: tahoma;
+            font-size: 16px;
+        }
+        #menu{
+            width: 650px;
+            height: 40px;
+            background-color: #6d136a;
+            margin: 50px auto; 
+        }
+        ul.root > li{
+            list-style: none;
+            float:left;
+            position: relative;
+        }
+        ul.root > li > a{
+            text-decoration: none;
+            color: #fff;
+            padding: 0px 15px 0px 15px;
+            line-height: 40px;
+            display: block;
+        }
+        ul.root > li > a:hover{
+            background-color: orange;
+            color: red;
+            transition: ease-in 0.40s;
+            -moz-transition:ease-in 0.40s;
+            -webkit-transition: ease-in 0.40s;
+        }
+        ul.submenu{
+            width:250px;
+            background-color: #6d136a;
+            min-height: 150px;
+            display: none;
+            position: absolute;
+        }
+        ul.submenu li{
+            list-style: none;
+        }
+        ul.submenu li a{
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            line-height: 40px;
+            text-indent: 15px;
+        }
+        ul.root > li:hover ul.submenu {
+            display: block;
+        }
+        ul.submenu li a:hover{
+            background-color: orange;
+            color: red;
+            transition: ease-in 0.40s;
+            -moz-transition:ease-in 0.40s;
+            -webkit-transition: ease-in 0.40s;
+        }
+        ul.root >li:hover ul.submenu{
+            display: block;
+            transition: ease-out 2s;
+            -moz-transition:ease-out 2s;
+            -webkit-transition: ease-out 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul class="root">
+            <li><a href="">Home</a>
+                <ul class="submenu">
+                    <li><a href="">works</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Hobbies</a></li>
+                </ul>
+            </li>
+            <li><a href="">Promotion</a></li>
+            <li><a href="">Gift Baskets</a></li>
+            <li><a href="">Flower services</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
